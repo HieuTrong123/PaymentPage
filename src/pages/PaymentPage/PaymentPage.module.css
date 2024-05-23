@@ -87,7 +87,7 @@
   align-items: center;
 }
 .box_QR img {
-  width: 350px;
+  width: 70%;
   margin-bottom: 20px;
 }
 .pay_container {
@@ -164,10 +164,28 @@
     flex-direction: column-reverse;
     gap: 10px;
   }
+  .box_QR img {
+    width: 100%;
+    /* margin-bo ttom: 20px; */
+  }
+  .btn {
+    margin-right: 0;
+  }
+  .head h1 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  * {
+    font-size: 14px;
+  }
 }
 @media (min-width: 740px) and (max-width: 1023px) {
   .note {
     flex-direction: column-reverse;
     gap: 10px;
+  }
+  .box_btn {
+    display: flex;
+    justify-content: center;
   }
 }

@@ -136,7 +136,7 @@ export default function PaymentPage() {
                                 </p>
                             </div>
                             <div className={`row ${classes.box_flex}`}>
-                                <div className='col l-8 c-8'>
+                                <div className='col l-7 c-7'>
                                     <p>
                                         Số tài khoản:
                                     </p>
@@ -144,14 +144,14 @@ export default function PaymentPage() {
                                         106873679492
                                     </p>
                                 </div>
-                                <div className={`col l-4 c-4 ${classes.box_btn_pay}`}>
+                                <div className={`col l-5 c-5 ${classes.box_btn_pay}`}>
 
                                     <Button className={classes.btn_pay}>Sao chép</Button>
                                 </div>
 
                             </div>
                             <div className={`row ${classes.box_flex}`}>
-                                <div className='col l-8 c-8'>
+                                <div className='col l-7 c-7'>
                                     <p>
                                         Số tiền:
                                     </p>
@@ -159,13 +159,13 @@ export default function PaymentPage() {
                                         2,000,000 vnd
                                     </p>
                                 </div>
-                                <div className={`col l-4 c-4 ${classes.box_btn_pay}`}>
+                                <div className={`col l-5 c-5 ${classes.box_btn_pay}`}>
 
                                     <Button className={classes.btn_pay}>Sao chép</Button>
                                 </div>
                             </div>
                             <div className={`row ${classes.box_flex}`}>
-                                <div className='col l-8 c-8'>
+                                <div className='col l-7 c-7'>
                                     <p>
                                         Nội dung:
                                     </p>
@@ -173,7 +173,7 @@ export default function PaymentPage() {
                                         CSPZLT740O9 Thanh toan don hang
                                     </p>
                                 </div>
-                                <div className={`col l-4 c-4 ${classes.box_btn_pay}`}>
+                                <div className={`col l-5 c-5 ${classes.box_btn_pay}`}>
 
                                     <Button className={classes.btn_pay}>Sao chép</Button>
                                 </div>
