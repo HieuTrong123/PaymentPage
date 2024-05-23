@@ -81,9 +81,12 @@ export default function PaymentPage() {
                         </li>
                     </ul>
                     <div className={classes.box_btn}>
-                        <Button className={classes.btn}>
-                            Thanh Toán
-                        </Button>
+                        <a href='#QR' onClick={SetDetails}>
+                            <Button className={classes.btn}>
+                                Thanh Toán
+                            </Button>
+                        </a>
+
                     </div>
                     <div className={classes.box_img}>
                         <img className={classes.img} src={ThienTrang} />
@@ -91,7 +94,7 @@ export default function PaymentPage() {
                 </div>
 
             </div>
-            <div className={`grid wide ${classes.container} ${classes.pay}`}>
+            <div id='QR' className={`grid wide ${classes.container} ${classes.pay}`}>
                 <div className={classes.Payhead}>
                     <img src={lamp} />
                     <div>

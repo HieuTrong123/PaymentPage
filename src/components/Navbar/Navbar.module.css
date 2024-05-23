@@ -8,6 +8,9 @@
   align-items: center;
   padding: 8px 0;
 }
+.nav p {
+  font-weight: 700;
+}
 .nav img {
   height: 42px;
 }
