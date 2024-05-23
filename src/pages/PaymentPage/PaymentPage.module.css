@@ -40,7 +40,7 @@
 .head p {
   cursor: pointer;
   color: #4673fe;
-  font-size: 14.4px;
+  /* font-size: 1px; */
   font-weight: 600;
 }
 .box_img {
@@ -74,8 +74,12 @@
   padding: 0 20px;
   margin-bottom: 20px;
 }
-.Payhead img {
-  margin-right: 6px;
+.Payhead div {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 20px;
+  flex-wrap: wrap;
 }
 .box_QR {
   display: flex;
@@ -95,8 +99,13 @@
   gap: 4px;
 }
 .box_flex {
+  /* display: flex;
+  justify-content: space-between; */
+}
+.box_btn_pay {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
+  align-items: center;
 }
 .bank {
   display: flex;
@@ -115,10 +124,12 @@
 }
 .btn_pay {
   height: fit-content;
-  padding: 8px 20px;
+  /* height: 14.4px; */
+  padding: 8px 20px !important;
   color: #555555;
   font-size: 12.6px;
   font-weight: 700;
+  word-break: keep-all;
 }
 .btn_QR {
   width: fit-content;
@@ -126,4 +137,37 @@
   background-color: transparent !important;
   border: 1px solid #6b7280;
   border-radius: 6px !important;
+}
+.note {
+  display: flex;
+  align-items: center;
+}
+.note_btn {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 739px) {
+  .container {
+    padding: 20px 20px;
+    border-radius: 4px;
+  }
+  .listInfo {
+    margin-top: 0px;
+    padding: 0 10px;
+  }
+  .box_btn {
+    display: flex;
+    justify-content: center;
+  }
+  .note {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+  .note {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
 }

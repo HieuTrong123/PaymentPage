@@ -24,58 +24,58 @@ export default function PaymentPage() {
                 <div className={stateDetais ? `${classes.listInfoOn}` : `${classes.listInfoOff}`}>
                     <ul className={classes.listInfo}>
                         <li className={`row ${classes.infoItem}`}>
-                            <p className='col l-6'>
+                            <p className='col l-6 c-6'>
                                 Khách hàng
                             </p>
-                            <p className='col l-6 darkColor'>
+                            <p className='col l-6 c-6 darkColor'>
                                 Nguyễn Văn Anh
                             </p>
                         </li>
                         <li className={`row ${classes.infoItem}`}>
-                            <p className='col l-6'>
+                            <p className='col l-6 c-6'>
                                 Nhân viên
                             </p>
-                            <p className='col l-6 darkColor'>
+                            <p className='col l-6 c-6 darkColor'>
                                 Nguyễn Văn Anh
                             </p>
                         </li>
                         <li className={`row ${classes.infoItem}`}>
-                            <p className='col l-6'>
+                            <p className='col l-6 c-6'>
                                 Số điện thoại
                             </p>
-                            <p className='col l-6 darkColor'>
+                            <p className='col l-6 c-6 darkColor'>
                                 09xxxxxxx
                             </p>
                         </li>
                         <li className={`row ${classes.infoItem}`}>
-                            <p className='col l-6'>
+                            <p className='col l-6 c-6'>
                                 Địa chỉ
                             </p>
-                            <p className='col l-6 darkColor'>
+                            <p className='col l-6 c-6 darkColor'>
                                 60 Đ. ĐHT 32, Đông Hưng Thuận, Quận 12, Thành phố Hồ Chí Minh
                             </p>
                         </li>
                         <li className={`row ${classes.infoItem}`}>
-                            <p className='col l-6 darkColor'>
+                            <p className='col l-6 c-6 darkColor'>
                                 Sản phẩm
                             </p>
-                            <p className='col l-6 darkColor'>
+                            <p className='col l-6 c-6 darkColor'>
                                 Áo sơ mi barber kaki thun màu đen x1 x 500,000
                             </p>
                         </li>
                         <li className={`row ${classes.infoItem}`}>
-                            <p className='col l-6 darkColor'>
+                            <p className='col l-6 c-6 darkColor'>
                                 Tổng tiền
                             </p>
-                            <p className='col l-6 darkColor'>
+                            <p className='col l-6 c-6 darkColor'>
                                 1,780,000
                             </p>
                         </li>
                         <li className={`row ${classes.infoItem}`}>
-                            <p className='col l-6 darkColor'>
+                            <p className='col l-6 c-6 darkColor'>
                                 Cọc ( %50)
                             </p>
-                            <p className='col l-6 darkColor'>
+                            <p className='col l-6 c-6 darkColor'>
                                 890,000
                             </p>
                         </li>
@@ -94,28 +94,27 @@ export default function PaymentPage() {
             <div className={`grid wide ${classes.container} ${classes.pay}`}>
                 <div className={classes.Payhead}>
                     <img src={lamp} />
-                    <p>Mở App Ngân hàng bất kỳ để </p>
-                    <span className='darkColor'>
-                        quét mã VietQR
-                    </span>
-                    <p>
-                        hoặc
-                    </p>
-                    <span className='darkColor'>
-                        chuyển khoản
-                    </span>
-                    <p>
-                        chính xác số tiền, nội dung bên dưới
-                    </p>
+                    <div>
+                        <p>Mở App Ngân hàng bất kỳ để </p>
+                        <span className='darkColor'>
+                            quét mã VietQR
+                        </span>
+                        <p>
+                            hoặc
+                        </p>
+                        <span className='darkColor'>
+                            chuyển khoản
+                        </span>
+                        <p>
+                            chính xác số tiền, nội dung bên dưới
+                        </p>
+                    </div>
                 </div>
                 <div className={`row ${classes.pay_container}`}>
-                    <div className={`col l-6 ${classes.box_QR}`}>
+                    <div className={`col l-6 c-12 ${classes.box_QR}`}>
                         <img src={QR} />
-                        <Button className={classes.btn_QR}>
-                            Hủy
-                        </Button>
                     </div>
-                    <div className='col l-6'>
+                    <div className='col l-6 c-12'>
                         <div className={classes.pay_container_right}>
                             <div className={classes.bank}>
                                 <img src={NganHang} />
@@ -136,8 +135,8 @@ export default function PaymentPage() {
                                     DOAN THI THU THUONG
                                 </p>
                             </div>
-                            <div className={classes.box_flex}>
-                                <div>
+                            <div className={`row ${classes.box_flex}`}>
+                                <div className='col l-8 c-8'>
                                     <p>
                                         Số tài khoản:
                                     </p>
@@ -145,10 +144,14 @@ export default function PaymentPage() {
                                         106873679492
                                     </p>
                                 </div>
-                                <Button className={classes.btn_pay}>Sao chép</Button>
+                                <div className={`col l-4 c-4 ${classes.box_btn_pay}`}>
+
+                                    <Button className={classes.btn_pay}>Sao chép</Button>
+                                </div>
+
                             </div>
-                            <div className={classes.box_flex}>
-                                <div>
+                            <div className={`row ${classes.box_flex}`}>
+                                <div className='col l-8 c-8'>
                                     <p>
                                         Số tiền:
                                     </p>
@@ -156,10 +159,13 @@ export default function PaymentPage() {
                                         2,000,000 vnd
                                     </p>
                                 </div>
-                                <Button className={classes.btn_pay}>Sao chép</Button>
+                                <div className={`col l-4 c-4 ${classes.box_btn_pay}`}>
+
+                                    <Button className={classes.btn_pay}>Sao chép</Button>
+                                </div>
                             </div>
-                            <div className={classes.box_flex}>
-                                <div>
+                            <div className={`row ${classes.box_flex}`}>
+                                <div className='col l-8 c-8'>
                                     <p>
                                         Nội dung:
                                     </p>
@@ -167,26 +173,37 @@ export default function PaymentPage() {
                                         CSPZLT740O9 Thanh toan don hang
                                     </p>
                                 </div>
-                                <Button className={classes.btn_pay}>Sao chép</Button>
+                                <div className={`col l-4 c-4 ${classes.box_btn_pay}`}>
+
+                                    <Button className={classes.btn_pay}>Sao chép</Button>
+                                </div>
                             </div>
                         </div>
-                        <div className={classes.PayNote}>
-                            <p>
-                                Lưu ý : Nhập chính xác số tiền
-                            </p>
-                            <span className='darkColor'>
-                                2,000
-                            </span>
-                            <p>
-                                , nội dung
-                            </p>
-                            <span className='darkColor'>
-                                CSPZLT740O9 Thanh toan don hang
-                            </span>
-                            <p>
-                                khi chuyển khoản
-                            </p>
-                        </div>
+
+                    </div>
+                </div>
+                <div className={`row ${classes.note}`}>
+                    <div className={`col l-6 c-12 ${classes.note_btn}`}>
+                        <Button className={classes.btn_QR}>
+                            Hủy
+                        </Button>
+                    </div>
+                    <div className={`col l-6 c-12 ${classes.PayNote}`}>
+                        <p>
+                            Lưu ý : Nhập chính xác số tiền
+                        </p>
+                        <span className='darkColor'>
+                            2,000
+                        </span>
+                        <p>
+                            , nội dung
+                        </p>
+                        <span className='darkColor'>
+                            CSPZLT740O9 Thanh toan don hang
+                        </span>
+                        <p>
+                            khi chuyển khoản
+                        </p>
                     </div>
                 </div>
             </div>
