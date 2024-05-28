@@ -66,7 +66,7 @@ export default function PaymentPage() {
                             ))
                         }
                         <InfoITem darkColor={true} title="Tổng tiền" content={detailsInfo.total.price} />
-                        {/* <InfoITem darkColor={true} title="Cọc ( %50)" content={detailsInfo.total.deposit} /> */}
+                        <InfoITem darkColor={true} title="Cọc ( %50)" content={detailsInfo.total.deposit} />
                     </ul>
                     <div className={classes.box_btn}>
                         <a href='#QR' onClick={SetDetails}>

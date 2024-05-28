@@ -4,6 +4,7 @@ import InfoITem from '../../components/InfoItem/InfoITem'
 import Button from '../../components/Button/Button'
 import ThienTrang from '../../assets/ThienTrang.png'
 import { Link } from 'react-router-dom'
+import backBtn from '../../assets/ArrowLeft.png'
 export default function DetailsProduct() {
     const detailsInfo = {
         info: {
@@ -24,6 +25,9 @@ export default function DetailsProduct() {
 
             <div className={`grid wide ${classes.container}`}>
                 <div className={classes.head}>
+                    <Link to={'/'} className={classes.backBtn}>
+                        <img src={backBtn} />
+                    </Link>
                     <h1>Chi tiết sản phẩm</h1>
                     {/* {
                 stateDetais ? (<p onClick={SetDetails}>Ẩn</p>) : (<p onClick={SetDetails}>Xem</p>)
@@ -40,16 +44,16 @@ export default function DetailsProduct() {
                         <InfoITem title="Thêu" content={detailsInfo.info.Rent} />
                         <InfoITem title="Số lượng" content={detailsInfo.info.quantity} />
                         <InfoITem darkColor={true} title="Tổng tiền" content={detailsInfo.total.price} />
-                        <InfoITem darkColor={true} title="Cọc ( %50)" content={detailsInfo.total.deposit} />
+                        {/* <InfoITem darkColor={true} title="Cọc ( %50)" content={detailsInfo.total.deposit} /> */}
                     </ul>
-                    <div className={classes.box_btn}>
+                    {/* <div className={classes.box_btn}>
                         <Link to={'/'}>
 
                             <Button className={classes.btn}>
                                 Trở về
                             </Button>
                         </Link>
-                    </div>
+                    </div> */}
                     <div className={classes.box_img}>
                         <img className={classes.img} src={ThienTrang} />
                     </div>
