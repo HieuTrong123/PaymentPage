@@ -1,0 +1,32 @@
+.infoItem {
+  border-bottom: 1px solid #e9e6e6;
+  padding: 6px 0;
+}
+.title {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.box_btn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.btn {
+  box-shadow: 0 6px 13.4px rgba(0, 0, 0, 25%);
+  padding: 6px 20px !important;
+}
+@media (max-width: 739px) {
+  .content {
+    /* flex-direction: column; */
+  }
+  .content p {
+    height: fit-content;
+  }
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+}

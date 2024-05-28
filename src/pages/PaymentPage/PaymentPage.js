@@ -5,11 +5,43 @@ import ThienTrang from '../../assets/ThienTrang.png'
 import QR from '../../assets/QR.png'
 import NganHang from '../../assets/NganHang.png'
 import lamp from '../../assets/lamp.png'
+import InfoITem from '../../components/InfoItem/InfoITem'
+import ProductItem from '../../components/ProductItem/ProductItem'
 
 export default function PaymentPage() {
-    const [stateDetais, setsStateDetais] = useState(false)
+    const [stateDetais, setsStateDetais] = useState(true)
     function SetDetails() {
         setsStateDetais(!stateDetais)
+    }
+    const detailsInfo = {
+        info: {
+            customer_name: "Nguyễn Văn Anh",
+            staff_name: "Nguyễn Văn Anh",
+            phone: "09xxxxxxx",
+            address: "60 Đ. ĐHT 32, Đông Hưng Thuận, Quận 12, Thành phố Hồ Chí Minh",
+
+        },
+        products: [
+            {
+                name: "Áo sơ mi barber kaki thun màu đen",
+                count: 1,
+                price: "500,000"
+            },
+            {
+                name: "Áo sơ mi barber kaki thun màu đen",
+                count: 1,
+                price: "500,000"
+            },
+            {
+                name: "Áo sơ mi barber kaki thun màu đen",
+                count: 1,
+                price: "500,000"
+            }
+        ],
+        total: {
+            price: "1,780,000",
+            deposit: "890,000"
+        }
     }
     return (
         <div className={classes.Payment}>
@@ -23,62 +55,18 @@ export default function PaymentPage() {
                 </div>
                 <div className={stateDetais ? `${classes.listInfoOn}` : `${classes.listInfoOff}`}>
                     <ul className={classes.listInfo}>
-                        <li className={`row ${classes.infoItem}`}>
-                            <p className='col l-6 c-6'>
-                                Khách hàng
-                            </p>
-                            <p className='col l-6 c-6 darkColor'>
-                                Nguyễn Văn Anh
-                            </p>
-                        </li>
-                        <li className={`row ${classes.infoItem}`}>
-                            <p className='col l-6 c-6'>
-                                Nhân viên
-                            </p>
-                            <p className='col l-6 c-6 darkColor'>
-                                Nguyễn Văn Anh
-                            </p>
-                        </li>
-                        <li className={`row ${classes.infoItem}`}>
-                            <p className='col l-6 c-6'>
-                                Số điện thoại
-                            </p>
-                            <p className='col l-6 c-6 darkColor'>
-                                09xxxxxxx
-                            </p>
-                        </li>
-                        <li className={`row ${classes.infoItem}`}>
-                            <p className='col l-6 c-6'>
-                                Địa chỉ
-                            </p>
-                            <p className='col l-6 c-6 darkColor'>
-                                60 Đ. ĐHT 32, Đông Hưng Thuận, Quận 12, Thành phố Hồ Chí Minh
-                            </p>
-                        </li>
-                        <li className={`row ${classes.infoItem}`}>
-                            <p className='col l-6 c-6 darkColor'>
-                                Sản phẩm
-                            </p>
-                            <p className='col l-6 c-6 darkColor'>
-                                Áo sơ mi barber kaki thun màu đen x1 x 500,000
-                            </p>
-                        </li>
-                        <li className={`row ${classes.infoItem}`}>
-                            <p className='col l-6 c-6 darkColor'>
-                                Tổng tiền
-                            </p>
-                            <p className='col l-6 c-6 darkColor'>
-                                1,780,000
-                            </p>
-                        </li>
-                        <li className={`row ${classes.infoItem}`}>
-                            <p className='col l-6 c-6 darkColor'>
-                                Cọc ( %50)
-                            </p>
-                            <p className='col l-6 c-6 darkColor'>
-                                890,000
-                            </p>
-                        </li>
+
+                        <InfoITem title="Khách hàng" content={detailsInfo.info.customer_name} />
+                        <InfoITem title="Nhân viên" content={detailsInfo.info.staff_name} />
+                        <InfoITem title="Số điện thoại" content={detailsInfo.info.phone} />
+                        <InfoITem title="Địa chỉ" content={detailsInfo.info.address} />
+                        {
+                            detailsInfo.products.map(e => (
+                                <ProductItem title="Sản phẩm" content={e} />
+                            ))
+                        }
+                        <InfoITem darkColor={true} title="Tổng tiền" content={detailsInfo.total.price} />
+                        {/* <InfoITem darkColor={true} title="Cọc ( %50)" content={detailsInfo.total.deposit} /> */}
                     </ul>
                     <div className={classes.box_btn}>
                         <a href='#QR' onClick={SetDetails}>
@@ -88,9 +76,9 @@ export default function PaymentPage() {
                         </a>
 
                     </div>
-                    <div className={classes.box_img}>
+                    {/* <div className={classes.box_img}>
                         <img className={classes.img} src={ThienTrang} />
-                    </div>
+                    </div> */}
                 </div>
 
             </div>
