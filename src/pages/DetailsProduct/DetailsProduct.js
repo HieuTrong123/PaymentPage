@@ -58,7 +58,9 @@ export default function DetailsProduct() {
                         <img className={classes.img} src={ThienTrang} />
                     </div>
                 </div>
-
+                <p className='darkColor' style={{ textAlign: 'center', padding: '30px 0 10px 0' }}>
+                    Lưu ý : Nếu đơn hàng có vấn đề, hoặc không đúng yêu cầu của mình liên hệ số điện thoại/ zalo : 09154845415 để được nhân viên hỗ trợ
+                </p>
             </div>
         </div>
     )

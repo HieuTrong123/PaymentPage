@@ -79,6 +79,9 @@ export default function PaymentPage() {
                     {/* <div className={classes.box_img}>
                         <img className={classes.img} src={ThienTrang} />
                     </div> */}
+                    <p className='darkColor' style={{ textAlign: 'center', padding: '30px 0 10px 0' }}>
+                        Lưu ý : Khánh hàng vui lòng thanh toán số tiền cọc theo đã ghi trong đơn hàng để hệ thống tiến hành duyệt đơn.
+                    </p>
                 </div>
 
             </div>
