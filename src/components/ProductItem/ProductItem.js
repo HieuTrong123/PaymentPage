@@ -1,36 +1,41 @@
 import React from 'react'
 import classes from './ProductItem.module.css'
 import Button from '../Button/Button'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import image from '../../assets/Product.png'
 export default function ProductItem(props) {
+
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const addIndexToUrl = () => {
+        const searchParams = new URLSearchParams(location.search);
+        searchParams.set('index', props.index);
+        navigate(`/DetailsProduct?${searchParams.toString()}`);
+    };
+
     return (
-        <li className={`row ${classes.infoItem}`}>
-            <div className={`col l-6 c-6 ${classes.title}`}>
-                <p>
-                    {props.title}
-                </p>
-                <Link to={'/DetailsProduct'} className='l-0 c-12'>
-                    <Button className={classes.btn}>
-                        Chi tiết
-                    </Button>
-                </Link>
-            </div>
-            <div className={`col l-6 c-6 darkColor ${classes.content}`}>
+        <li className={`${classes.container}`}>
 
-                <p className='l-6 c-12'>
-                    {props.content.name} x{props.content.count} x {props.content.price}
-                </p>
-
-
-                <div className={`l-6 c-12 ${classes.box_btn}`}>
-                    <Link to={'/DetailsProduct'} className='l-4 c-0'>
-                        <Button className={classes.btn}>
-                            Chi tiết
-                        </Button>
-                    </Link>
+            <div className={classes.inf}>
+                <img src={image} />
+                <div>
+                    <p className={`darkColor`}>
+                        Tên sản phẩm: {props.content.name}
+                    </p>
+                    <p className={`darkColor`}>
+                        Số lượng: {props.content.number}
+                    </p>
+                    <p className={`darkColor`}>
+                        Giá: {props.content.money.toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}
+                    </p>
                 </div>
-
             </div>
+            <Link to={'/DetailsProduct'}>
+                <Button className={classes.btn}>
+                    Xem Thêm
+                </Button>
+            </Link>
         </li>
     )
 }

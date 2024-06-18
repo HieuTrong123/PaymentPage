@@ -17,5 +17,8 @@ ul {
   color: black;
   font-weight: 500;
 }
+body {
+  background-color: #c6e3e5;
+}
 .App {
 }
