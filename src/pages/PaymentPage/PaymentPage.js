@@ -75,7 +75,7 @@ export default function PaymentPage() {
     const employeeName = [customer.assign.last_name, customer.assign.first_name].join(' ').trim()
 
     return (
-        <div className={`${classes.Payment}`}>
+        <div className={`grid wide ${classes.Payment}`}>
             <div className={`l-8 c-12 ${classes.container}`}>
                 <div className={classes.head}>
                     <h1 className='darkColor'>Thông tin đơn hàng</h1>
@@ -124,8 +124,6 @@ export default function PaymentPage() {
                                 detailsInfo.products.map((e, i) => (
                                     <>
                                         <ProductItem index={i} content={e} />
-                                        <ProductItem index={i} content={e} />
-                                        <ProductItem index={i} content={e} />
                                     </>
                                 ))
                             }
@@ -144,25 +142,27 @@ export default function PaymentPage() {
                             <p className='darkColor'>
                                 Mã QR thanh toán
                             </p>
+
                         </div>
                         <div className={`${classes.pay_container}`}>
                             <div className={` ${classes.box_QR}`}>
-                                <img src={`https://img.vietqr.io/image/${QRinfo.BANKID}-${QRinfo.ACCOUNT_NO}-compact.png?amount=${totalPay}&addInfo=${detailsInfo.code + " Thanh toan don hang"}&accountName=${QRinfo.ACCOUNT_NAME}`} />
+                                <img className={classes.QR_img} src={`https://img.vietqr.io/image/${QRinfo.BANKID}-${QRinfo.ACCOUNT_NO}-compact.png?amount=${totalPay}&addInfo=${detailsInfo.code + " Thanh toan don hang"}&accountName=${QRinfo.ACCOUNT_NAME}`} />
+
                             </div>
                             <div className=''>
                                 <div className={classes.pay_container_right}>
                                     <div className={classes.bank}>
                                         <img src={NganHang} />
                                         <div>
-                                            <p>
+                                            {/* <p>
                                                 Ngân hàng
-                                            </p>
+                                            </p> */}
                                             <p className='darkColor'>
-                                                VPBank - Ngân hàng TMCP Việt Nam Thịnh Vượng - 970432
+                                                VPBank - Ngân hàng TMCP
                                             </p>
                                         </div>
                                     </div>
-                                    <div>
+                                    <div className={classes.box_flex}>
                                         <p>
                                             Chủ tài khoản:
                                         </p>
@@ -170,8 +170,8 @@ export default function PaymentPage() {
                                             {QRinfo.ACCOUNT_NAME}
                                         </p>
                                     </div>
-                                    <div className={`row ${classes.box_flex}`}>
-                                        <div className='col l-7 c-7'>
+                                    <div className={`row`}>
+                                        <div className={`col l-7 c-7 ${classes.box_flex}`}>
                                             <p>
                                                 Số tài khoản:
                                             </p>
@@ -185,8 +185,8 @@ export default function PaymentPage() {
                                         </div>
 
                                     </div>
-                                    <div className={`row ${classes.box_flex}`}>
-                                        <div className='col l-7 c-7'>
+                                    <div className={`row`}>
+                                        <div className={`col l-7 c-7 ${classes.box_flex}`}>
                                             <p>
                                                 Số tiền:
                                             </p>
@@ -199,8 +199,8 @@ export default function PaymentPage() {
                                             <Button className={classes.btn_pay}>Sao chép</Button>
                                         </div>
                                     </div>
-                                    <div className={`row ${classes.box_flex}`}>
-                                        <div className='col l-7 c-7'>
+                                    <div className={`row`}>
+                                        <div className={`col l-7 c-7 ${classes.box_flex}`}>
                                             <p>
                                                 Nội dung:
                                             </p>
@@ -213,6 +213,9 @@ export default function PaymentPage() {
                                             <Button className={classes.btn_pay}>Sao chép</Button>
                                         </div>
                                     </div>
+                                    <Button className={`l-0 c-12 ${classes.btn_QR}`}>
+                                        Thanh toán ngay
+                                    </Button>
                                 </div>
 
                             </div>

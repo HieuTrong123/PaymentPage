@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 200px;
-  padding: 16px 0;
+  padding: 8px 0;
 }
 .nav div {
   display: flex;
@@ -40,6 +40,9 @@
 }
 @media (max-width: 739px) {
   .Navbar_btn__z9ZfX {
+  }
+  .nav p {
+    display: none;
   }
 }
 @media (min-width: 740px) and (max-width: 1023px) {

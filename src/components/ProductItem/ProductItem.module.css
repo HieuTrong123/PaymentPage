@@ -18,5 +18,32 @@
   /* align-items: center; */
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
+}
+.inf img {
+  width: 100px;
+  height: 85px;
+}
+.btn {
+  height: fit-content;
+  /* height: 14.4px; */
+  padding: 8px 20px !important;
+  color: #555555;
+  font-size: 12.6px;
+  font-weight: 700;
+  word-break: keep-all;
+}
+@media (max-width: 739px) {
+  .btn {
+    display: none;
+  }
+  .inf div {
+    gap: 4px;
+  }
+  .inf img {
+    width: 120px;
+    height: 105px;
+  }
+}
+@media (min-width: 740px) and (max-width: 1023px) {
 }

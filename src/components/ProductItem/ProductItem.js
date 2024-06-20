@@ -20,13 +20,13 @@ export default function ProductItem(props) {
             <div className={classes.inf}>
                 <img src={image} />
                 <div>
-                    <p className={`darkColor`}>
+                    <p>
                         Tên sản phẩm: {props.content.name}
                     </p>
-                    <p className={`darkColor`}>
+                    <p>
                         Số lượng: {props.content.number}
                     </p>
-                    <p className={`darkColor`}>
+                    <p>
                         Giá: {props.content.money.toLocaleString('it-IT', { style: 'currency', currency: 'VND' })}
                     </p>
                 </div>

@@ -12,13 +12,13 @@
 .container {
   /* margin-top: 20px !important; */
   background-color: #fff;
-  padding: 14px 35px;
+  padding: 14px 24px;
   border-radius: 24px;
   box-shadow: 0 8px 13.4px rgba(0, 0, 0, 25%);
 }
 .listInfo {
   margin-top: 10px;
-  padding: 0 30px;
+  padding: 0 10px;
 }
 .listInfoOn {
   height: auto;
@@ -34,8 +34,8 @@
   /* margin-bottom: 10px; */
 }
 .head h1 {
-  font-size: 22px;
-  font-weight: 400;
+  font-size: 16px;
+  /* font-weight: 400; */
 }
 .head p {
   cursor: pointer;
@@ -55,7 +55,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 30px;
+  padding-left: 10px;
 }
 .btn {
   margin: 10px 0;
@@ -87,7 +87,7 @@
 
 .Payhead p {
   font-size: 16px;
-  font-weight: 700;
+  /* font-weight: 700; */
   margin-bottom: 20px;
 }
 .Payhead div {
@@ -103,7 +103,7 @@
   align-items: center;
 }
 .box_QR img {
-  width: 70%;
+  width: 53%;
   /* margin-bottom: 20px; */
 }
 .pay_container {
@@ -116,8 +116,10 @@
   gap: 4px;
 }
 .box_flex {
-  /* display: flex;
-  justify-content: space-between; */
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  /* justify-content: space-between; */
 }
 .box_btn_pay {
   display: flex;
@@ -137,7 +139,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 48px 0;
+  /* padding: 10px 0; */
 }
 .btn_pay {
   height: fit-content;
@@ -149,11 +151,14 @@
   word-break: keep-all;
 }
 .btn_QR {
+  align-self: center;
   width: fit-content;
-  /* padding: 8px 20px; */
-  background-color: transparent !important;
-  border: 1px solid #6b7280;
-  border-radius: 6px !important;
+  padding: 8px 20px;
+  margin: 8px 0;
+  background-color: #70b9be;
+  /* border: 1px solid #6b7280; */
+  color: #fff;
+  /* border-radius: 6px !important; */
 }
 .note {
   display: flex;
@@ -163,15 +168,25 @@
   display: flex;
   justify-content: center;
 }
+.products {
+}
 .products h1 {
-  font-size: 22px;
-  font-weight: 400;
-  padding: 20px 0;
+  font-size: 16px;
+  /* font-weight: 400; */
+  padding-bottom: 16px;
 }
 .product_list {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  max-height: 254px;
+  overflow: auto;
+  /* overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none; */
+  padding: 10px 20px 20px 20px;
+}
+.product_list::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 .qrpay {
   display: flex;
@@ -184,6 +199,9 @@
   gap: 8px;
 }
 @media (max-width: 739px) {
+  .Payment {
+    flex-direction: column;
+  }
   .container {
     padding: 20px 20px;
     border-radius: 4px;
@@ -193,8 +211,15 @@
     padding: 0 10px;
   }
   .box_btn {
+    align-items: start;
+  }
+  .box_btn p {
+    padding: 8px 0;
+  }
+  .box_btn div {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: end;
   }
   .note {
     flex-direction: column-reverse;
@@ -221,6 +246,9 @@
   .btn {
     margin: 10px 0;
     transform: translateY(0);
+  }
+  .product_list {
+    max-height: 50%;
   }
 }
 @media (min-width: 740px) and (max-width: 1023px) {
