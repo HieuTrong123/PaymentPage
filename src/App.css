@@ -20,5 +20,10 @@ ul {
 body {
   background-color: #c6e3e5;
 }
-.App {
+@media (max-width: 739px) {
+  * {
+    font-size: 12px;
+  }
+}
+@media (min-width: 740px) and (max-width: 1023px) {
 }
