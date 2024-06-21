@@ -75,7 +75,7 @@ export default function PaymentPage() {
     const employeeName = [customer.assign.last_name, customer.assign.first_name].join(' ').trim()
 
     return (
-        <div className={`grid wide ${classes.Payment}`}>
+        <div className={`${classes.Payment}`}>
             <div className={`l-8 c-12 ${classes.container}`}>
                 <div className={classes.head}>
                     <h1 className='darkColor'>Thông tin đơn hàng</h1>
