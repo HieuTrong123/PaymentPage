@@ -24,6 +24,10 @@ body {
   * {
     font-size: 12px;
   }
+  .darkColor {
+    color: black;
+    font-weight: 500;
+  }
 }
 @media (min-width: 740px) and (max-width: 1023px) {
 }
