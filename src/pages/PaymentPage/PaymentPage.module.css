@@ -201,6 +201,7 @@
 @media (max-width: 739px) {
   .Payment {
     flex-direction: column;
+    padding: 15px 5px;
   }
   .container {
     padding: 20px 20px;
