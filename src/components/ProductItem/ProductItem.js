@@ -18,7 +18,10 @@ export default function ProductItem(props) {
         <li className={`${classes.container}`}>
 
             <div className={classes.inf}>
-                <img src={image} />
+                <div className={classes.box_img}>
+                    <img src={image} />
+                    {/* <div className={classes.rectangleDiv} /> */}
+                </div>
                 <div>
                     <p>
                         Tên sản phẩm: {props.content.name}
@@ -31,7 +34,8 @@ export default function ProductItem(props) {
                     </p>
                 </div>
             </div>
-            <Link to={'/DetailsProduct'}>
+            <Link onClick={addIndexToUrl}>
+                {/* // to={'/DetailsProduct'} */}
                 <Button className={classes.btn}>
                     Xem Thêm
                 </Button>

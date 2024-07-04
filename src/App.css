@@ -1,5 +1,7 @@
 :root {
-  --color: #423c3c;
+  --color: #2b3674;
+  --margin: 15px;
+  --fontSize: 15px;
 }
 * {
   padding: 0;
@@ -7,19 +9,25 @@
   margin: 0;
   outline: 0;
   box-sizing: border-box;
-  font-size: 15px;
+  font-size: var(--fontSize);
   color: var(--color);
 }
 ul {
   list-style: none;
 }
 .darkColor {
-  color: black;
-  font-weight: 500;
+  color: var(--color);
+  font-weight: 600;
+}
+.textTitle {
+  color: var(--color);
+  font-size: 17px;
+  font-weight: 650;
 }
 body {
-  background-color: #c6e3e5;
+  background-color: rgba(163, 174, 208, 0.5);
 }
+
 @media (max-width: 739px) {
   * {
     font-size: 12px;

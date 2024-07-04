@@ -1,5 +1,5 @@
 .box_padding {
-  padding: 14px 0;
+  padding: 15px 20px;
   height: 100vh;
 }
 .container {
@@ -7,17 +7,25 @@
   padding: 14px 35px;
   border-radius: 8px;
   box-shadow: 0 12px 33.4px rgba(0, 0, 0, 25%);
+  /* height: 90%; */
 }
 .listInfo {
+  flex: 1;
   margin-top: 10px;
   padding: 0 30px;
 }
 .listInfoOn {
   height: auto;
 }
+
 .listInfoOff {
   overflow: hidden;
   height: 0;
+}
+.box_flex {
+  display: flex;
+  padding: 20px 80px;
+  margin-bottom: 115px;
 }
 .head {
   display: flex;
@@ -33,7 +41,7 @@
 }
 .head h1 {
   font-size: 22px;
-  font-weight: 400;
+  /* font-weight: 400; */
 }
 .head p {
   cursor: pointer;
@@ -42,11 +50,12 @@
   font-weight: 600;
 }
 .box_img {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
+  width: 40%;
 }
 .img {
-  width: 40%;
+  width: 100%;
   /* height: 331px; */
   margin-top: 14px;
 }
@@ -68,6 +77,12 @@
   margin-right: 30px;
 }
 @media (max-width: 739px) {
+  .box_flex {
+    flex-direction: column-reverse;
+    padding: 0 0;
+    gap: 15px;
+    margin-bottom: 0;
+  }
   .container {
     padding: 20px 20px;
     border-radius: 4px;
@@ -84,9 +99,10 @@
   * {
     font-size: 14px;
   }
-  .img {
-    width: 90%;
-    /* height: 331px; */
+  .box_img {
+    /* display: flex;
+    justify-content: center; */
+    width: 100%;
   }
   .btn {
     margin: 10px 0;

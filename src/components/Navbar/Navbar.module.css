@@ -1,6 +1,6 @@
 .container {
   background-color: #fff;
-  box-shadow: 0 12px 33.4px rgba(0, 0, 0, 25%);
+  /* box-shadow: 0 12px 33.4px rgba(0, 0, 0, 25%); */
   display: flex;
   justify-content: space-between;
 }
@@ -46,6 +46,11 @@
   }
   .nav {
     gap: 0;
+  }
+}
+@media (max-width: 1022px) {
+  .nav p {
+    display: none;
   }
 }
 @media (min-width: 740px) and (max-width: 1023px) {
