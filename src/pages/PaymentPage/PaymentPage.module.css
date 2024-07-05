@@ -31,12 +31,14 @@
   height: 25px;
 }
 .stt {
+  margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 0;
   width: 90%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .listInfo {
   /* margin-top: 10px;
@@ -181,6 +183,7 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  font-weight: 500;
   min-height: 485px;
 }
 .box_flex {
@@ -237,7 +240,14 @@
   display: flex;
   justify-content: center;
 }
+.right {
+  display: flex;
+  flex-direction: column;
+}
 .products {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .products h1 {
   /* font-size: 16px; */
@@ -249,9 +259,9 @@
   border-style: dashed; */
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  min-height: 276px;
-  max-height: 276px;
+  gap: 20px;
+  min-height: 236px;
+  max-height: 236px;
   overflow: auto;
   /* border-radius: 10px; */
   /* padding: 10px 20px 20px 20px; */
@@ -274,16 +284,24 @@
 @media (max-width: 739px) {
   .info {
     flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
   }
   .stt {
     flex-direction: column-reverse;
     align-items: end;
-    gap: 15px;
+    gap: 10px;
     width: auto;
+    margin-left: 0;
+    margin-right: 0;
   }
   .Payment {
     flex-direction: column;
-    padding: 15px 5px;
+    padding: 10px 8px;
+    gap: 10px;
+  }
+  .qrpay {
+    gap: 10px;
   }
   .container {
     padding: 20px 20px;

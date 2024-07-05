@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './ProductItem.module.css'
 import Button from '../Button/Button'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import image from '../../assets/Product.png'
+import image from '../../assets/img/Product.png'
 export default function ProductItem(props) {
 
     const location = useLocation();

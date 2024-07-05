@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './Navbar.module.css'
 import Button from '../Button/Button'
-import zalo_icon from '../../assets/zalo_icon.png'
+import zalo_icon from '../../assets/img/zalo_icon.png'
 
 import dataRef from '../Config/config.js'
 function getLogo() {

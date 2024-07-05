@@ -3,6 +3,12 @@
   --margin: 15px;
   --fontSize: 15px;
 }
+@font-face {
+  font-family: "CustomFont";
+  src: url("./assets/fonts/Sofia-Pro-Regular.otf") format("opentype");
+  /* font-weight: normal;
+  font-style: normal; */
+}
 * {
   padding: 0;
   border: 0;
@@ -11,7 +17,9 @@
   box-sizing: border-box;
   font-size: var(--fontSize);
   color: var(--color);
+  font-family: "CustomFont", sans-serif;
 }
+
 ul {
   list-style: none;
 }

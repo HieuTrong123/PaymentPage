@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react'
 import classes from './DetailsProduct.module.css'
 import InfoITem from '../../components/InfoItem/InfoITem'
 import Button from '../../components/Button/Button'
-import ThienTrang from '../../assets/ThienTrang.png'
+import ThienTrang from '../../assets/img/ThienTrang.png'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import backBtn from '../../assets/ArrowLeft.png'
+import backBtn from '../../assets/img/ArrowLeft.png'
 import getOrder from '../PaymentPage/GetOrder.js'
 
 export default function DetailsProduct() {

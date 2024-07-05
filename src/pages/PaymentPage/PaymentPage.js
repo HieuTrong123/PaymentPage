@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import classes from './PaymentPage.module.css'
 import Button from '../../components/Button/Button'
-import ThienTrang from '../../assets/ThienTrang.png'
-import QR from '../../assets/QR.png'
-import NganHang from '../../assets/NganHang.png'
-import lamp from '../../assets/lamp.png'
+import ThienTrang from '../../assets/img/ThienTrang.png'
+import QR from '../../assets/img/QR.png'
+import NganHang from '../../assets/img/NganHang.png'
+import lamp from '../../assets/img/lamp.png'
 import InfoITem from '../../components/InfoItem/InfoITem'
 import ProductItem from '../../components/ProductItem/ProductItem'
 import { useLocation } from 'react-router-dom';
 import getOrder from './GetOrder.js'
 import Swal from 'sweetalert2';
 import dataRef from '../../components/Config/config.js';
-import zalo_icon from '../../assets/zalo_icon.png'
-import phone_icon from '../../assets/Phone.png'
-import fb_icon from '../../assets/Facebook.png'
-import iconCheck from '../../assets/iconscheck.png'
-import iconSupport from '../../assets/iconsSupport.png'
-import iconPayment from '../../assets/iconsPayment.png'
+import zalo_icon from '../../assets/img/zalo_icon.png'
+import phone_icon from '../../assets/img/Phone.png'
+import fb_icon from '../../assets/img/Facebook.png'
+import iconCheck from '../../assets/img/iconscheck.png'
+import iconSupport from '../../assets/img/iconsSupport.png'
+import iconPayment from '../../assets/img/iconsPayment.png'
 
 export default function PaymentPage() {
     const [statePayment, setsStatePayment] = useState(false)
@@ -149,7 +149,7 @@ export default function PaymentPage() {
 
     return (
         <div className={`${classes.Payment}`}>
-            <div className='l-8 c-12'>
+            <div className={`l-8 c-12 ${classes.right}`}>
                 <div>
                     {/* <div className={classes.head}>
                     <h1 className='darkColor'>Thông tin đơn hàng</h1>
@@ -208,6 +208,7 @@ export default function PaymentPage() {
                             ))
 
                         }
+
                     </div>
 
                     <div className={classes.stt}>
@@ -225,7 +226,7 @@ export default function PaymentPage() {
                                 </Button>
                             </a> */}
                         </div>
-                        <div className='c-6'>
+                        <div className='c-10 l-6'>
                             <InfoITem darkColor={true} title="Tổng tiền" content={totalAmountFormat + ` (VAT: ${VATFormat})`} />
                             <InfoITem darkColor={true} title="Đã thanh toán" content={depositFormat + ` (${depositRatio}%)`} />
                             <InfoITem darkColor={true} title="Cần thanh toán" content={totalPayFormat} />

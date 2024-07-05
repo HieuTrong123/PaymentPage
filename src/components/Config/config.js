@@ -1,10 +1,10 @@
-import logoAoThun247 from '../../assets/logoAoThun247.jpg'
-import logoBTP from '../../assets/logoBTP.jpg'
-import logoDPBTP from '../../assets/logoDPBTP.png'
-import logoThienTrangTT from '../../assets/logoThienTrangTT.jpg'
-import logoDefault from '../../assets/logoAoThun247.jpg' // Sử dụng khi không tìm đc logo
-import logoVBC from '../../assets/VBClogo.png'
-import logoVP from '../../assets/VPlogo.jpg'
+import logoAoThun247 from '../../assets/img/logoAoThun247.jpg'
+import logoBTP from '../../assets/img/logoBTP.jpg'
+import logoDPBTP from '../../assets/img/logoDPBTP.png'
+import logoThienTrangTT from '../../assets/img/logoThienTrangTT.jpg'
+import logoDefault from '../../assets/img/logoAoThun247.jpg' // Sử dụng khi không tìm đc logo
+import logoVBC from '../../assets/img/VBClogo.png'
+import logoVP from '../../assets/img/VPlogo.jpg'
 
 const dataRef = {
     'aothun247': {
@@ -12,7 +12,7 @@ const dataRef = {
         bank: {
             BANKID: 'VPB',
             BANKNAME: 'VPBank - Ngân hàng TMCP Việt Nam Thịnh Vượng',
-            BANKLOGO : logoVP,
+            BANKLOGO: logoVP,
             ACCOUNT_NO: 118833333,
             ACCOUNT_NAME: 'PHAN THỊ HẠNH'
         }
@@ -22,7 +22,7 @@ const dataRef = {
         bank: {
             BANKID: 'VCB',
             BANKNAME: 'Vietcombank - Ngân hàng TMCP Ngoại Thương Việt Nam',
-            BANKLOGO : logoVBC,
+            BANKLOGO: logoVBC,
             ACCOUNT_NO: 3383777777,
             ACCOUNT_NAME: 'PHAN THỊ HẠNH'
         }
@@ -32,7 +32,7 @@ const dataRef = {
         bank: {
             BANKID: 'VCB',
             BANKNAME: 'Vietcombank - Ngân hàng TMCP Ngoại Thương Việt Nam',
-            BANKLOGO : logoVBC,
+            BANKLOGO: logoVBC,
             ACCOUNT_NO: 8386777777,
             ACCOUNT_NAME: 'PHAN THỊ HẠNH'
         }
@@ -42,7 +42,7 @@ const dataRef = {
         bank: {
             BANKID: 'VPB',
             BANKNAME: 'VPBank - Ngân hàng TMCP Việt Nam Thịnh Vượng',
-            BANKLOGO : logoVP,
+            BANKLOGO: logoVP,
             ACCOUNT_NO: 118833333,
             ACCOUNT_NAME: 'PHAN THỊ HẠNH'
         }
