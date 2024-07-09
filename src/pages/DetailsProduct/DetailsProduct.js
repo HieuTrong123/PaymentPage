@@ -2,38 +2,13 @@ import React, { useState, useEffect } from 'react'
 import classes from './DetailsProduct.module.css'
 import InfoITem from '../../components/InfoItem/InfoITem'
 import Button from '../../components/Button/Button'
-import ThienTrang from '../../assets/img/ThienTrang.png'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import placeholder_image from '../../assets/img/no-image-available.png'
+// import { Link, useLocation, useNavigate } from 'react-router-dom'
 import backBtn from '../../assets/img/ArrowLeft.png'
 import getOrder from '../PaymentPage/GetOrder.js'
 
 export default function DetailsProduct() {
-    // const detailsInfo = {
-    //     info: {
-    //         name: "Áo sơ mi barber kaki thun màu đen",
-    //         material: "Cotton",
-    //         color: "#12545",
-    //         print: "Có / Không + Vị trí",
-    //         Rent: "Có / Không + Vị trí",
-    //         quantity: 10,
-    //     },
-    //     total: {
-    //         price: "1,780,000",
-    //         deposit: "890,000"
-    //     }
-    // }
-
-    const navigate = useNavigate();
-
-    const handleBackClick = () => {
-        window.location.href = document.URL.replace('DetailsProduct', '');
-        // navigate(-1);
-        // console.log('back btn');
-    };
-
-
-    const location = useLocation();
-    const queryParams = new URLSearchParams(location.search);
+    const queryParams = new URLSearchParams(window.location.search);
     const orderHash = queryParams.get('order_hash');
     const index = queryParams.get('index');
 
@@ -45,8 +20,17 @@ export default function DetailsProduct() {
         async function fetchOrder() {
             try {
                 feting = true;
-                const data = await getOrder(orderHash);
-                setDetailsInfo(data.data);
+                const data = window.data || await getOrder(orderHash).then(r => r.data);
+                window.data = data;
+                setDetailsInfo(data);
+
+                // set lại sdt trên thanh nav
+                // const script = document.createElement('script');
+                // script.innerHTML = `
+                //     document.querySelector('#zalo_number').innerHTML = '${data.data.customer.assign.phone}';
+                //     document.querySelector('#link_zalo_number').href = 'https://zalo.me/' + '${data.data.customer.assign.phone}';
+                //     `;
+                // document.body.appendChild(script);
             } catch (err) {
                 setError(err.message);
             } finally {
@@ -84,9 +68,9 @@ export default function DetailsProduct() {
 
     return (
         <div className={classes.box_padding}>
-            <div className={`${classes.container}`}>
+            <div className={`grid wide ${classes.container}`}>
                 <div className={classes.head}>
-                    <button onClick={handleBackClick} className={classes.backBtn}>
+                    <button onClick={() => { window.history.back() }} className={classes.backBtn}>
                         <img src={backBtn} />
                     </button>
                     <h1 className='textTitle'>Chi tiết sản phẩm</h1>
@@ -97,7 +81,7 @@ export default function DetailsProduct() {
                 </div>
                 <div className={`${classes.listInfoOn} ${classes.box_flex}`}>
                     <div className={classes.box_img}>
-                        <img className={classes.img} src={ThienTrang} />
+                        <img className={classes.img} src={product.image || placeholder_image} />
                     </div>
                     <ul className={classes.listInfo}>
 

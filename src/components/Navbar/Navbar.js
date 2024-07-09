@@ -18,7 +18,6 @@ export default function Navbar() {
             <div className={`grid wide ${classes.nav}`}>
                 <div>
                     <img src={getLogo()} />
-
                 </div>
                 {/* <p>
                     Lưu ý : Khánh hàng vui lòng xem kỹ lại thông tin đơn hàng. Nếu có sai sót vui vòng liên hệ số: <span id="zalo_number"></span> hoặc nhấn biểu tượng zalo để được hỗ trợ

@@ -22,7 +22,7 @@
   text-align: center;
 }
 .nav img {
-  height: 2.625rem;
+  height: 3.5rem;
 }
 .btn {
   /* margin: 0.625rem 0; */
@@ -39,8 +39,7 @@
   /* margin-right: 30px; */
 }
 @media (max-width: 739px) {
-  .Navbar_btn__z9ZfX {
-  }
+ 
   .nav p {
     display: none;
   }

@@ -1,13 +1,15 @@
 import logoAoThun247 from '../../assets/img/logoAoThun247.jpg'
 import logoBTP from '../../assets/img/logoBTP.jpg'
 import logoDPBTP from '../../assets/img/logoDPBTP.png'
-import logoThienTrangTT from '../../assets/img/logoThienTrangTT.jpg'
+import logodongphucTT from '../../assets/img/logodongphucTT.jpg'
 import logoDefault from '../../assets/img/logoAoThun247.jpg' // Sử dụng khi không tìm đc logo
 import logoVBC from '../../assets/img/VBClogo.png'
 import logoVP from '../../assets/img/VPlogo.jpg'
 
 const dataRef = {
     'aothun247': {
+        sologan: 'Đơn giản là đẹp',
+        favicon: logoAoThun247,
         logo: logoAoThun247,
         bank: {
             BANKID: 'VPB',
@@ -18,6 +20,8 @@ const dataRef = {
         }
     },
     'dongphucbtp': {
+        sologan: 'Giải pháp đồng phục doanh nghiệp',
+        favicon: logoDPBTP,
         logo: logoDPBTP,
         bank: {
             BANKID: 'VCB',
@@ -28,7 +32,9 @@ const dataRef = {
         }
     },
     'thientrang': {
-        logo: logoThienTrangTT,
+        sologan: 'Giải pháp đồng phục chuyên nghiệp',
+        favicon: logodongphucTT,
+        logo: logodongphucTT,
         bank: {
             BANKID: 'VCB',
             BANKNAME: 'Vietcombank - Ngân hàng TMCP Ngoại Thương Việt Nam',
@@ -38,7 +44,9 @@ const dataRef = {
         }
     },
     'default': {
-        logo: logoDefault,
+        sologan: 'Đơn giản là đẹp',
+        favicon: logoAoThun247,
+        logo: logoAoThun247,
         bank: {
             BANKID: 'VPB',
             BANKNAME: 'VPBank - Ngân hàng TMCP Việt Nam Thịnh Vượng',

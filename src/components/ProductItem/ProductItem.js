@@ -2,27 +2,17 @@ import React from 'react'
 import classes from './ProductItem.module.css'
 import Button from '../Button/Button'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import image from '../../assets/img/Product.png'
+import placeholder_image from '../../assets/img/no-image-available.png'
 export default function ProductItem(props) {
-
-    const location = useLocation();
-    const navigate = useNavigate();
-
-    const addIndexToUrl = () => {
-        const searchParams = new URLSearchParams(location.search);
-        searchParams.set('index', props.index);
-        navigate(`/DetailsProduct?${searchParams.toString()}`);
-    };
-
     return (
         <li className={`${classes.container}`}>
 
             <div className={classes.inf}>
                 <div className={classes.box_img}>
-                    <img src={image} />
+                    <img src={props.content.image || placeholder_image} />
                     {/* <div className={classes.rectangleDiv} /> */}
                 </div>
-                <div>
+                <div className={classes.inf_content}>
                     <p>
                         Tên sản phẩm: {props.content.name}
                     </p>
@@ -34,7 +24,8 @@ export default function ProductItem(props) {
                     </p>
                 </div>
             </div>
-            <Link onClick={addIndexToUrl}>
+            {/* <Link> */}
+            <Link to={'/DetailsProduct' + window.location.search + "&index=" + props.index}>
                 {/* // to={'/DetailsProduct'} */}
                 <Button className={classes.btn}>
                     Xem Thêm

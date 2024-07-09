@@ -1,11 +1,11 @@
 :root {
   --color: #2b3674;
-  --margin: 15px;
+  --margin: 10px;
   --fontSize: 15px;
 }
 @font-face {
   font-family: "CustomFont";
-  src: url("./assets/fonts/Sofia-Pro-Regular.otf") format("opentype");
+  src: url("./assets/fonts/SourceSerifPro-Regular.otf") format("opentype");
   /* font-weight: normal;
   font-style: normal; */
 }
@@ -29,7 +29,7 @@ ul {
 }
 .textTitle {
   color: var(--color);
-  font-size: 17px;
+  font-size: 1.25rem;
   font-weight: 650;
 }
 body {
